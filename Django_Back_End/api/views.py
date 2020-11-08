@@ -19,11 +19,12 @@ class UsersApiNew(generics.CreateAPIView):
 
 class UsersAPIUpdate(generics.RetrieveUpdateAPIView):
     queryset = Users.objects.all()
+    print(queryset)
     serializer_class = UsersSerializer     
 
 class UsersAPIDelete(generics.RetrieveDestroyAPIView):
     queryset = Users.objects.all()
-    serializer_class = Users
+    serializer_class = UsersSerializer
     
 
     

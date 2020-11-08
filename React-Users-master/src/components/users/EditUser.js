@@ -24,12 +24,13 @@ const EditUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://127.0.0.1:8000/update/${id}`, user);
+   await axios.put(`http://127.0.0.1:8000/update/${id}/`, user)
+
     history.push("/");
   };
 
+
   const loadUser = async () => {
-    console.log(id, "not found")
     const result = await axios.get(`http://127.0.0.1:8000/update/${id}`);
     setUser(result.data);
   };
