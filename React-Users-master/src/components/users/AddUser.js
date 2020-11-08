@@ -19,7 +19,7 @@ const AddUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:3003/users", user);
+    await axios.post("http://127.0.0.1:8000/insert/", user);
     history.push("/");
   };
   return (
@@ -37,6 +37,7 @@ const AddUser = () => {
               onChange={e => onInputChange(e)}
             />
           </div>
+          
           <div className="form-group">
             <input
               type="text"

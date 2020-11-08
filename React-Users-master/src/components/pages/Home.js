@@ -10,12 +10,12 @@ const Home = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3003/users");
+    const result = await axios.get("http://127.0.0.1:8000/");
     setUser(result.data.reverse());
   };
 
   const deleteUser = async id => {
-    await axios.delete(`http://localhost:3003/users/${id}`);
+    await axios.delete(`http://127.0.0.1:8000/delete/${id}`);
     loadUsers();
   };
 
@@ -46,7 +46,7 @@ const Home = () => {
                   </Link>
                   <Link
                     class="btn btn-outline-primary mr-2"
-                    to={`/users/edit/${user.id}`}
+                    to={`/users/edit/${user.Id}`}
                   >
                     Edit
                   </Link>
