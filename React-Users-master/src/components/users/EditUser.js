@@ -29,6 +29,7 @@ const EditUser = () => {
   };
 
   const loadUser = async () => {
+    console.log(id, "not found")
     const result = await axios.get(`http://127.0.0.1:8000/update/${id}`);
     setUser(result.data);
   };

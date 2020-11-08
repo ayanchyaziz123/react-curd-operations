@@ -46,7 +46,7 @@ const Home = () => {
                   </Link>
                   <Link
                     class="btn btn-outline-primary mr-2"
-                    to={`/users/edit/${user.Id}`}
+                    to={`/users/edit/${user.id}`}
                   >
                     Edit
                   </Link>
