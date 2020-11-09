@@ -23,6 +23,7 @@ const EditUser = () => {
   }, []);
 
   const onSubmit = async e => {
+    alert("Do you want to update ?");
     e.preventDefault();
    await axios.put(`http://127.0.0.1:8000/update/${id}/`, user)
 

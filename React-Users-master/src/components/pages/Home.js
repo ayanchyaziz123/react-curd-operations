@@ -15,6 +15,7 @@ const Home = () => {
   };
 
   const deleteUser = async id => {
+    alert("Do you want to delete ?");
     await axios.delete(`http://127.0.0.1:8000/delete/${id}`);
     loadUsers();
   };

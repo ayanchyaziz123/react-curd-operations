@@ -18,6 +18,7 @@ const AddUser = () => {
   };
 
   const onSubmit = async e => {
+    alert("Do you want to add ?");
     e.preventDefault();
     await axios.post("http://127.0.0.1:8000/insert/", user);
     history.push("/");
